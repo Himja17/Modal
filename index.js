@@ -34,4 +34,12 @@ for (let i = 0; i < selectDialog.length; i++) {
 
   closeModal.addEventListener("click", closeDialog);
   overlay.addEventListener("click", closeDialog);
+
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") {
+      if (!modal.classList.contains("hidden")) {
+        closeDialog();
+      }
+    }
+  });
 }
